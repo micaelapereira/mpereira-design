@@ -1,3 +1,27 @@
 // ============================================================
-// FLOW — recorrido de 4 pantallas de Agenda OM (paso 6)
+// FLOW — recorrido de 4 pantallas de Agenda OM
+// Siempre una sola fila de 4. Ocupa el 76% del ancho, un poco
+// menos que los tres celulares de la portada que tiene arriba.
 // ============================================================
+
+@use "../utilities/variables" as *;
+
+.flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5%;
+    width: 76%;
+    margin: 40px auto 0;
+    padding: 0;
+    list-style: none;
+
+    figure {
+        margin: 0;
+    }
+
+    figcaption {
+        margin-top: 10px;
+        font-size: 12.5px;
+        color: $color-ink-muted;
+    }
+}

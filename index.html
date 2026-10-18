@@ -146,8 +146,212 @@
             </div>
         </section>
 
-        <!-- 3b. AGENDA OM (paso 6) -->
-        <section id="agenda-om"></section>
+        <!-- 3b. AGENDA OM -->
+        <section class="seccion proyecto" id="agenda-om">
+            <span class="chip chip-verde">Agenda OM</span>
+            <div class="ancho-texto">
+                <h2 class="display">Reservar un momento de bienestar muy fácilmente.</h2>
+                <ul class="tags">
+                    <li class="tag">Benchmarking</li>
+                    <li class="tag">Research</li>
+                    <li class="tag">Entrevistas</li>
+                    <li class="tag">MVP</li>
+                    <li class="tag">Wireframing</li>
+                    <li class="tag">Prototipado</li>
+                    <li class="tag">Testing</li>
+                    <li class="tag">Wellness</li>
+                </ul>
+            </div>
+
+            <div class="ancho-media">
+                <div data-aos="fade-up">
+                    <img class="img-principal lift-soft" src="img/agenda-portada.webp" width="2080" height="1432" loading="lazy" alt="Agenda OM en varios celulares: la portada con el logo sobre un salón de yoga luminoso y, al lado, pantallas de búsqueda, actividades de reiki y horarios disponibles." />
+                </div>
+
+                <!-- Recorrido de una reserva, pantalla por pantalla -->
+                <ol class="flow">
+                    <li data-aos="fade-up">
+                        <figure>
+                            <img class="lift-soft" src="img/agenda-pantalla-1.webp" width="338" height="678" loading="lazy" alt="Pantalla de bienvenida de Agenda OM sobre fondo verde, con el botón Comenzar." />
+                            <figcaption>1. Bienvenida</figcaption>
+                        </figure>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="150">
+                        <figure>
+                            <img class="lift-soft" src="img/agenda-pantalla-2.webp" width="339" height="683" loading="lazy" alt="Home de Agenda OM: categorías Yoga, Reiki, Encuentros y Meditación, buscador, reserva directa y recomendaciones." />
+                            <figcaption>2. Explorar</figcaption>
+                        </figure>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <figure>
+                            <img class="lift-soft" src="img/agenda-pantalla-3.webp" width="338" height="677" loading="lazy" alt="Detalle de la clase Yoga y Meditación con los horarios disponibles por día." />
+                            <figcaption>3. Elegir horario</figcaption>
+                        </figure>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="450">
+                        <figure>
+                            <img class="lift-soft" src="img/agenda-pantalla-4.webp" width="338" height="677" loading="lazy" alt="Pantalla de reserva confirmada con número de reserva, actividad, lugar, fecha y hora." />
+                            <figcaption>4. Reserva confirmada</figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="ancho-texto texto">
+                <p>Agenda OM es una app para hacer reservas de experiencias de bienestar: masajes, reiki, constelaciones familiares y encuentros holísticos grupales. Fue mi proyecto final del curso de Diseño UX/UI.</p>
+                <p>El desafío era que una misma app sirviera para sesiones individuales y para encuentros grupales, y que reservar fuera simple y sin fricciones.</p>
+            </div>
+
+            <!-- Proceso: Carousel de Bootstrap + scripts/proceso.js -->
+            <div class="ancho-media proceso">
+                <h3>Proceso de Agenda OM mobile app</h3>
+
+                <div id="carousel-proceso" class="carousel slide carousel-proceso" data-bs-interval="false" data-bs-wrap="false" role="region" aria-roledescription="carrusel" aria-label="Proceso de Agenda OM, 5 etapas. Usá las flechas del teclado para avanzar.">
+                    <div class="proceso-head">
+                        <div class="etapas">
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="0" aria-current="true">1 · Investigar</button>
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="1" aria-current="false">2 · Definir</button>
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="2" aria-current="false">3 · Estructurar</button>
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="3" aria-current="false">4 · Diseñar</button>
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="4" aria-current="false">5 · Validar</button>
+                        </div>
+                        <p class="proceso-ayuda">Abrí cada lámina para verla en grande</p>
+                    </div>
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active" role="group" aria-roledescription="etapa" aria-label="1 de 5: Investigar">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">1</div>
+                                    <h4>Investigar</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Investigación de mercado</li>
+                                        <li class="tag">Benchmarking</li>
+                                        <li class="tag">2 user personas</li>
+                                    </ul>
+                                    <p>Empecé entendiendo el terreno: investigué el mercado de las experiencias de bienestar, comparé cómo resuelven las reservas otras apps y creé dos user personas para tener siempre presente para quién estaba diseñando.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-benchmarking.webp" width="687" height="766" loading="lazy" alt="Benchmarking de Bookyway, Mindbody y ClassPass: funcionalidades clave, navegación, fortalezas y debilidades de cada una." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-user-personas.webp" width="687" height="757" loading="lazy" alt="Las dos user personas: objetivos, retos, objeciones y dónde buscarían información." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" role="group" aria-roledescription="etapa" aria-label="2 de 5: Definir">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">2</div>
+                                    <h4>Definir</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Problema, objetivo y solución</li>
+                                        <li class="tag">Storytelling</li>
+                                        <li class="tag">POV</li>
+                                        <li class="tag">MVP</li>
+                                    </ul>
+                                    <p>Con esa base definí el problema, el objetivo y la solución, y los conté como una historia para no perder de vista a las personas. De ahí salieron el punto de vista (POV) y el MVP: lo mínimo que la app tenía que resolver bien.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-problema-objetivo-solucion.webp" width="687" height="762" loading="lazy" alt="Definición del problema, el objetivo y la solución de Agenda OM." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-pov-mvp.webp" width="687" height="763" loading="lazy" alt="Punto de vista del usuario y producto mínimo viable: versión de lanzamiento y funcionalidades deseadas." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" role="group" aria-roledescription="etapa" aria-label="3 de 5: Estructurar">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">3</div>
+                                    <h4>Estructurar</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Card sorting</li>
+                                        <li class="tag">Arquitectura de la información</li>
+                                        <li class="tag">Taskflow</li>
+                                        <li class="tag">Userflow</li>
+                                    </ul>
+                                    <p>Ordené el contenido de la app a partir de un card sorting, que dio forma a la arquitectura de la información, y tracé el taskflow y el userflow para que reservar fuera un camino claro de principio a fin.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-arquitectura-informacion.webp" width="687" height="670" loading="lazy" alt="Mapa de la arquitectura de la información de la app, por secciones." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-taskflow-userflow.webp" width="687" height="693" loading="lazy" alt="Taskflow de una reserva, de abrir la app a recibir la confirmación, y userflow del participante." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" role="group" aria-roledescription="etapa" aria-label="4 de 5: Diseñar">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">4</div>
+                                    <h4>Diseñar</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Bocetos</li>
+                                        <li class="tag">Wireframes de alta fidelidad</li>
+                                        <li class="tag">UI Kit</li>
+                                        <li class="tag">Evaluación heurística</li>
+                                    </ul>
+                                    <p>Pasé de los primeros bocetos a wireframes digitales de alta fidelidad, armé un UI Kit para mantener todo consistente y revisé el diseño con una evaluación heurística.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina lamina-moodboard" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-moodboard.webp" width="687" height="495" loading="lazy" alt="Moodboard de Agenda OM: plantas, espacios de yoga, rituales y la paleta verde de la marca." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-wireframes-baja.webp" width="687" height="729" loading="lazy" alt="Wireframes a mano, wireframes digitales de baja fidelidad y wireframes con grillas iOS, pantalla por pantalla." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-wireframes-media-alta.webp" width="687" height="747" loading="lazy" alt="Tres iteraciones de wireframes de media fidelidad, hasta la versión con imágenes y color." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" role="group" aria-roledescription="etapa" aria-label="5 de 5: Validar">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">5</div>
+                                    <h4>Validar</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Prueba de usabilidad con 5 usuarios</li>
+                                        <li class="tag">Guion de entrevista</li>
+                                        <li class="tag">Encuestas de satisfacción</li>
+                                        <li class="tag">Métricas de eficiencia y eficacia</li>
+                                        <li class="tag">Resumen ejecutivo</li>
+                                    </ul>
+                                    <p>Probé el prototipo final con 5 usuarios, con guion de entrevista, encuestas de satisfacción y métricas de eficiencia y eficacia. Las cinco personas completaron las tres tareas, y confirmar una reserva llevó apenas unos segundos. Lo que más costó fue buscar una clase, y de ahí salieron las recomendaciones del resumen ejecutivo, como reunir todos los filtros arriba en el inicio.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-prueba-usabilidad.webp" width="687" height="764" loading="lazy" alt="Métricas de la prueba de usabilidad: las 3 tareas completadas por los 5 usuarios, con tiempos y cantidad de pasos." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="img/proceso-metricas-resumen.webp" width="687" height="777" loading="lazy" alt="Métricas de satisfacción en cuatro gráficos de torta y resumen ejecutivo de la prueba: lo que funcionó, lo que no y las recomendaciones." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="acciones acciones-final">
+                <a class="btn btn-verde" href="https://www.behance.net/gallery/215972661/Agenda-OM-Mobile-App-Diseno-UX-UI-Coderhouse" target="_blank" rel="noopener noreferrer">Ver caso completo en Behance</a>
+            </div>
+            <div class="volver"><a class="btn btn-volver" href="#proyectos">↑ Volver a proyectos</a></div>
+        </section>
 
         <!-- 3c. MPEREIRADESIGN -->
         <section class="seccion proyecto" id="mpereira">
@@ -225,11 +429,21 @@
         </section>
     </main>
 
+    <!-- VISOR DE LÁMINAS (Modal de Bootstrap). scripts/proceso.js pone la imagen elegida -->
+    <div class="modal fade visor" id="visor" tabindex="-1" aria-label="Lámina del proceso en grande" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                <img class="visor-img" src="img/proceso-benchmarking.webp" alt="" />
+            </div>
+        </div>
+    </div>
+
     <!-- 6. CONTACTO (paso 8) -->
     <footer id="contacto"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="scripts/aos-init.js"></script>
-</body>
+    <script src="scripts/proceso.js"></script></body>
 </html>
