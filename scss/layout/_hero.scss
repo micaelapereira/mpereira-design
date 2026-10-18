@@ -1,3 +1,59 @@
 // ============================================================
-// HERO — foto White Room, logo, subtítulo y CTA (paso 3)
+// HERO — pantalla completa con la foto White Room
+// Menú arriba y, en el resto del alto, el logo + subtítulo + CTA
+// centrados vertical y horizontalmente.
 // ============================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.hero {
+    // La foto se funde a blanco abajo, así fluye hacia Mis Proyectos
+    @include foto-fondo("../img/fondo-white-room.webp", "abajo");
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    // En celulares, svh descuenta las barras del navegador
+    min-height: 100svh;
+}
+
+.hero-inner {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 $space-side;
+    text-align: center;
+}
+
+// Logo y subtítulo comparten el mismo borde izquierdo; el par queda
+// centrado como bloque. El archivo del logo está recortado, así que
+// su borde izquierdo es la "M".
+.hero-id {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.hero-logo {
+    margin: 0 0 20px;
+    line-height: 0;
+
+    img {
+        width: clamp(220px, 34vw, 480px);
+    }
+
+    // En celular el logo mide lo mismo que el subtítulo. width: 0 hace
+    // que el logo no cuente al calcular el ancho del bloque (lo define el
+    // subtítulo), y min-width: 100% lo estira hasta ese ancho.
+    @include mq-max($bp-md-max) {
+        width: 0;
+        min-width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
