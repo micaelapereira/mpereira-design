@@ -1,0 +1,12 @@
+{
+  "name": "mpereira-design",
+  "version": "1.0.0",
+  "description": "Portfolio de Micaela Pereira — UI/UX Designer & Front-End Developer. One-page en HTML, SCSS y Bootstrap.",
+  "scripts": {
+    "build:scss": "sass scss/main.scss:styles/styles.css --no-source-map",
+    "watch:scss": "sass --watch scss/main.scss:styles/styles.css --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

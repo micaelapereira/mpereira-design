@@ -1,0 +1,28 @@
+// ============================================================
+// MPEREIRA DESIGN — PUNTO DE ENTRADA SCSS
+// Base monocroma (blanco + casi negro); el color aparece solo en
+// los botones, en pares fondo/texto. Tipografía: Familjen Grotesk
+// (títulos) + Bricolage Grotesque (texto).
+// Compila a: styles/styles.css
+// ============================================================
+
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
+
+@use "base/base";
+@use "base/tipografia";
+
+@use "layout/nav";
+@use "layout/hero";
+@use "layout/section";
+@use "layout/footer";
+
+@use "components/buttons";
+@use "components/chips-tags";
+@use "components/collage";
+@use "components/proyecto";
+@use "components/flow";
+@use "components/proceso";
+@use "components/sobre-mi";
+@use "components/servicios";
+@use "components/back-to-top";
