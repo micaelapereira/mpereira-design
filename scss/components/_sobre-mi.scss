@@ -1,3 +1,137 @@
 // ============================================================
-// SOBRE MÍ — cita, firma e imágenes flotantes (paso 7)
+// SOBRE MÍ — la cita firmada con el logo, rodeada de imágenes
+// de los proyectos que flotan alrededor.
+// En compu flotan en las esquinas; hasta tablet siguen una
+// composición propia: dos imágenes arriba de la cita y tres abajo.
 // ============================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.sobre-mi {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    overflow: hidden;
+
+    .ancho-texto {
+        position: relative;
+        z-index: 1;
+    }
+
+    // En celular la cita va en el medio y el padding deja lugar
+    // a las imágenes de arriba y de abajo. Las medidas están en vw
+    // (porcentaje del ancho de pantalla) para que la composición
+    // mantenga sus proporciones, con un tope para tablet.
+    @include mq-max($bp-lg-max) {
+        display: block;
+        min-height: 0;
+        padding-top: min(58vw, 300px);
+        padding-bottom: min(72vw, 360px);
+    }
+}
+
+// --- Cita + firma ---
+.cita {
+    margin: 0;
+
+    blockquote {
+        margin: 0;
+        font-family: $font-display;
+        font-size: clamp(22px, 3vw, 34px);
+        font-weight: 700;
+        line-height: 1.05;
+        text-wrap: balance;
+    }
+
+    img {
+        width: clamp(100px, 9vw, 165px);
+        margin: 32px auto 0;
+    }
+}
+
+// --- Imágenes flotantes (decorativas) ---
+.flotantes {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.flotante {
+    position: absolute;
+}
+
+// Celular inclinado con Agenda OM
+// compu: arriba a la izquierda · celular: arriba a la izquierda
+.img-celular-agenda {
+    top: 7%;
+    left: 6%;
+    width: clamp(70px, 7vw, 130px);
+
+    @include mq-max($bp-lg-max) {
+        top: min(25vw, 130px);
+        left: 19%;
+        width: min(15vw, 90px);
+    }
+}
+
+// Celular inclinado con Delos
+// compu: arriba a la derecha · celular: debajo de la cita, a la derecha
+.img-celular-delos {
+    top: 3%;
+    right: 6%;
+    width: clamp(70px, 7.5vw, 140px);
+
+    @include mq-max($bp-lg-max) {
+        top: auto;
+        right: 14%;
+        bottom: min(51vw, 260px);
+        width: min(13vw, 80px);
+    }
+}
+
+// Mano con el celular: el brazo queda cortado por el borde izquierdo
+// compu: abajo a la izquierda · celular: debajo de la cita, a la izquierda
+.img-mano {
+    bottom: 0;
+    left: 0;
+    width: clamp(140px, 15vw, 290px);
+
+    @include mq-max($bp-lg-max) {
+        bottom: min(41vw, 210px);
+        left: max(-12vw, -70px);
+        width: min(30vw, 180px);
+    }
+}
+
+// Laptop con Delos
+// compu: abajo al centro · celular: abajo de todo, al centro
+.img-laptop {
+    bottom: 3%;
+    left: 50%;
+    width: clamp(140px, 12vw, 240px);
+    transform: translateX(-50%);
+
+    @include mq-max($bp-lg-max) {
+        bottom: min(23vw, 120px);
+        width: min(31vw, 190px);
+    }
+}
+
+// Foto del escritorio con Agenda OM
+// compu: abajo a la derecha · celular: arriba a la derecha
+.img-escritorio {
+    bottom: 6%;
+    right: 9%;
+    width: clamp(80px, 7.5vw, 145px);
+    border-radius: $radius-img;
+
+    @include mq-max($bp-lg-max) {
+        top: min(12vw, 60px);
+        right: 16%;
+        bottom: auto;
+        width: min(23.5vw, 140px);
+    }
+}

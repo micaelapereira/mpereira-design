@@ -654,3 +654,118 @@ h4 {
   background-color: #fff;
   opacity: 1;
 }
+
+.sobre-mi {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  overflow: hidden;
+}
+.sobre-mi .ancho-texto {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 991.98px) {
+  .sobre-mi {
+    display: block;
+    min-height: 0;
+    padding-top: min(58vw, 300px);
+    padding-bottom: min(72vw, 360px);
+  }
+}
+
+.cita {
+  margin: 0;
+}
+.cita blockquote {
+  margin: 0;
+  font-family: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+.cita img {
+  width: clamp(100px, 9vw, 165px);
+  margin: 32px auto 0;
+}
+
+.flotantes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.flotante {
+  position: absolute;
+}
+
+.img-celular-agenda {
+  top: 7%;
+  left: 6%;
+  width: clamp(70px, 7vw, 130px);
+}
+@media (max-width: 991.98px) {
+  .img-celular-agenda {
+    top: min(25vw, 130px);
+    left: 19%;
+    width: min(15vw, 90px);
+  }
+}
+
+.img-celular-delos {
+  top: 3%;
+  right: 6%;
+  width: clamp(70px, 7.5vw, 140px);
+}
+@media (max-width: 991.98px) {
+  .img-celular-delos {
+    top: auto;
+    right: 14%;
+    bottom: min(51vw, 260px);
+    width: min(13vw, 80px);
+  }
+}
+
+.img-mano {
+  bottom: 0;
+  left: 0;
+  width: clamp(140px, 15vw, 290px);
+}
+@media (max-width: 991.98px) {
+  .img-mano {
+    bottom: min(41vw, 210px);
+    left: max(-12vw, -70px);
+    width: min(30vw, 180px);
+  }
+}
+
+.img-laptop {
+  bottom: 3%;
+  left: 50%;
+  width: clamp(140px, 12vw, 240px);
+  transform: translateX(-50%);
+}
+@media (max-width: 991.98px) {
+  .img-laptop {
+    bottom: min(23vw, 120px);
+    width: min(31vw, 190px);
+  }
+}
+
+.img-escritorio {
+  bottom: 6%;
+  right: 9%;
+  width: clamp(80px, 7.5vw, 145px);
+  border-radius: 8px;
+}
+@media (max-width: 991.98px) {
+  .img-escritorio {
+    top: min(12vw, 60px);
+    right: 16%;
+    bottom: auto;
+    width: min(23.5vw, 140px);
+  }
+}
