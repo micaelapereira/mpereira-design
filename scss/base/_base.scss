@@ -31,6 +31,12 @@ button:focus-visible {
     outline-offset: 3px;
 }
 
+// AOS hace subir los elementos 100px al aparecer; en el diseño
+// suben solo 28px, más sutil
+[data-aos="fade-up"] {
+    transform: translate3d(0, 28px, 0);
+}
+
 // "Reducir movimiento": sin transiciones ni animaciones
 @media (prefers-reduced-motion: reduce) {
     *,
