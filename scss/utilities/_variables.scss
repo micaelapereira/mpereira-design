@@ -1,3 +1,64 @@
 // ============================================================
-// VARIABLES — colores, tipografías, anchos, espaciados y radios (paso 2)
+// VARIABLES — MPereiraDesign
+// Base monocroma (blanco + casi negro). El color aparece solo en
+// los botones y chips, siempre en pares fondo/texto.
 // ============================================================
+
+// --- Colores base ---
+$color-ink: #141311;        // texto principal, bordes de tags y botones de línea
+$color-ink-muted: #4f4a43;  // eyebrows, pies de foto, footer
+$color-text: #2a2825;       // párrafos
+$color-hairline: #ddd7c9;   // líneas divisorias y borde de capturas
+$color-white: #fff;
+
+// --- Paleta de los botones ---
+$color-naranja: #FF5027;
+$color-durazno: #FFD6C0;
+$color-verde: #174418;
+$color-lima: #EEFF9F;
+$color-lavanda: #E7D6FF;
+$color-violeta: #510A32;
+
+// --- Pares de botones y chips: nombre, fondo, texto ---
+// Se recorren con @each para generar .btn-naranja, .chip-naranja, etc.
+$pares: (
+    naranja $color-naranja $color-durazno,
+    durazno $color-durazno $color-naranja,
+    lima $color-lima $color-violeta,
+    verde $color-verde $color-lima,
+    lavanda $color-lavanda $color-violeta,
+);
+
+// --- Placeholder "Próximamente" (MPereiraDesign) ---
+$color-tile-light: #dbd4c6;
+$color-tile-dark: #847c6d;
+
+// --- Tipografía ---
+$font-display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;
+$font-body: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+
+// --- Anchos de columna ---
+$width-text: 680px;     // textos
+$width-media: 1040px;   // imágenes de los proyectos
+$width-collage: 1200px; // collage de Mis Proyectos
+
+// --- Espaciado ---
+$space-section: 96px;        // padding vertical de cada sección
+$space-section-mobile: 72px;
+$space-side: 5vw;            // margen lateral
+
+// --- Radios ---
+$radius-img: 8px;
+$radius-pill: 100px;
+
+// --- Transiciones ---
+$transition-fast: 0.15s ease;  // botones
+$transition-base: 0.35s ease;  // imágenes que suben al pasar el mouse
+
+// --- Breakpoints (los mismos de Bootstrap, en versión "hasta") ---
+$bp-md-max: 767.98px;  // celular
+$bp-lg-max: 991.98px;  // tablet
+
+// --- Fundido de la esquina inferior derecha de las fotos de fondo ---
+// Suaviza la sombra fuerte que tiene la foto White Room en esa esquina.
+$fade-corner: radial-gradient(ellipse 85% 85% at 100% 100%, transparent 0%, transparent 12%, black 70%);

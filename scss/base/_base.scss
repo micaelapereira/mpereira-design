@@ -1,3 +1,42 @@
 // ============================================================
-// BASE — reset mínimo, body, scroll suave, foco visible (paso 2)
+// BASE — ajustes generales sobre el reboot de Bootstrap
 // ============================================================
+
+@use "../utilities/variables" as *;
+
+// Bootstrap toma la fuente y los colores del body de estas variables.
+// Cambiándolas acá, todo Bootstrap usa las nuestras.
+// (El scroll suave ya lo trae Bootstrap, y lo desactiva solo si el
+// usuario pidió "reducir movimiento".)
+:root {
+    --bs-body-font-family: #{$font-body};
+    --bs-body-color: #{$color-ink};
+    --bs-body-bg: #{$color-white};
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// Foco visible al navegar con teclado (Tab)
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid $color-ink;
+    outline-offset: 3px;
+}
+
+// "Reducir movimiento": sin transiciones ni animaciones
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}

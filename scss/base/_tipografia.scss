@@ -1,3 +1,49 @@
 // ============================================================
-// TIPOGRAFÍA — títulos display, eyebrows, kicker, párrafos (paso 2)
+// TIPOGRAFÍA
+// Títulos en Familjen Grotesk, texto en Bricolage Grotesque.
+// La jerarquía se marca con tamaño y peso, nunca con color.
 // ============================================================
+
+@use "../utilities/variables" as *;
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-family: $font-display;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+// --- Título de sección ---
+.display {
+    font-size: clamp(22px, 3vw, 34px);
+    line-height: 1.05;
+    text-wrap: balance;
+}
+
+// --- Categoría sobre las imágenes del collage ---
+.eyebrow {
+    margin: 0 0 14px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-ink-muted;
+}
+
+// --- Subtítulo del hero ---
+.kicker {
+    margin: 0 0 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+// --- Párrafos de los proyectos ---
+.texto p {
+    margin: 0 0 18px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-text;
+}

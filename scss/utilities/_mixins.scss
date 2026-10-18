@@ -1,3 +1,68 @@
 // ============================================================
-// MIXINS — breakpoints, foto de fondo con fundidos, pares de botones (paso 2)
+// MIXINS — MPereiraDesign
 // ============================================================
+
+@use "variables" as *;
+
+// --- Media queries ---
+// Uso: @include mq-max($bp-md-max) { ... }  → solo en celular
+@mixin mq-max($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+// --- Par de colores de un botón de Bootstrap ---
+// Bootstrap 5.3 pinta .btn con variables CSS (--bs-btn-bg, etc.).
+// Cambiando esas variables, el botón toma nuestros colores en todos
+// sus estados (normal, hover, click) sin pelear con Bootstrap.
+@mixin boton-par($fondo, $texto, $borde: $fondo) {
+    --bs-btn-color: #{$texto};
+    --bs-btn-bg: #{$fondo};
+    --bs-btn-border-color: #{$borde};
+    --bs-btn-hover-color: #{$texto};
+    --bs-btn-hover-bg: #{$fondo};
+    --bs-btn-hover-border-color: #{$borde};
+    --bs-btn-active-color: #{$texto};
+    --bs-btn-active-bg: #{$fondo};
+    --bs-btn-active-border-color: #{$borde};
+}
+
+// --- Foto de fondo en su propia capa ---
+// La foto va en un ::before detrás del contenido, así los fundidos
+// (mask-image) afectan solo a la foto y nunca al texto.
+// $fundido: null    → foto sin fundidos (collage)
+//           "abajo" → se funde a blanco abajo (hero)
+//           "arriba"→ aparece desde blanco arriba (Contacto)
+// En los dos últimos casos también se suaviza la esquina inferior derecha.
+@mixin foto-fondo($imagen, $fundido: null) {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: url($imagen) center / cover no-repeat;
+
+        @if $fundido {
+            $direccion: to top;
+
+            @if $fundido == "abajo" {
+                $direccion: to bottom;
+            }
+
+            $mascaras: $fade-corner, linear-gradient($direccion, black 65%, transparent 100%);
+
+            -webkit-mask-image: $mascaras;
+            -webkit-mask-composite: source-in;
+            mask-image: $mascaras;
+            mask-composite: intersect;
+        }
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+}

@@ -1,3 +1,56 @@
 // ============================================================
-// BOTONES — pares de color, secundario y volver (paso 2)
+// BOTONES
+// Partimos del .btn de Bootstrap y lo reestilizamos con sus propias
+// variables CSS: píldora, sin borde visible y con color solo en pares.
 // ============================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.btn {
+    --bs-btn-padding-x: 28px;
+    --bs-btn-padding-y: 13px;
+    --bs-btn-font-family: inherit;
+    --bs-btn-font-size: 13.5px;
+    --bs-btn-font-weight: 500;
+    --bs-btn-line-height: normal;
+    --bs-btn-border-radius: #{$radius-pill};
+    transition: transform $transition-fast;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    // Bootstrap marca el foco con una sombra; usamos el mismo contorno
+    // que el resto del sitio.
+    &:focus-visible {
+        outline: 2px solid $color-ink;
+        outline-offset: 3px;
+        box-shadow: none;
+    }
+}
+
+// --- Botones de color: .btn-naranja, .btn-durazno, .btn-lima, .btn-verde, .btn-lavanda ---
+@each $nombre, $fondo, $texto in $pares {
+    .btn-#{$nombre} {
+        @include boton-par($fondo, $texto);
+    }
+}
+
+// --- Botón de línea: transparente con borde fino ("Ver código") ---
+.btn-linea {
+    @include boton-par(transparent, $color-ink, $color-ink);
+}
+
+// --- Volver: blanco, el borde aparece al pasar el mouse ("↑ Volver a proyectos") ---
+.btn-volver {
+    --bs-btn-padding-x: 20px;
+    --bs-btn-padding-y: 10px;
+    --bs-btn-font-size: 13px;
+    @include boton-par($color-white, $color-ink, transparent);
+    --bs-btn-hover-border-color: #{$color-ink};
+
+    &:hover {
+        transform: none;
+    }
+}

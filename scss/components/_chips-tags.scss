@@ -1,3 +1,44 @@
 // ============================================================
-// CHIPS Y TAGS — píldoras de proyecto y etiquetas (paso 2)
+// CHIPS Y TAGS
+// Chip: nombre del proyecto en una píldora de color (su par).
+// Tag: etiqueta con borde fino, sin relleno.
 // ============================================================
+
+@use "../utilities/variables" as *;
+
+.chip {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: $radius-pill;
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+// --- .chip-naranja, .chip-lima, .chip-verde, etc. ---
+@each $nombre, $fondo, $texto in $pares {
+    .chip-#{$nombre} {
+        background-color: $fondo;
+        color: $texto;
+    }
+}
+
+// --- Lista de tags (va como <ul class="tags">) ---
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tag {
+    padding: 6px 13px;
+    border: 1px solid $color-ink;
+    border-radius: $radius-pill;
+    font-size: 11px;
+    line-height: normal;
+}
