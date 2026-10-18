@@ -42,6 +42,13 @@
     @include boton-par(transparent, $color-ink, $color-ink);
 }
 
+// --- Contacto: más grandes y a todo el ancho de su columna ---
+.btn-contacto {
+    --bs-btn-padding-y: 15px;
+    --bs-btn-font-size: 15px;
+    display: block;
+}
+
 // --- Volver: blanco, el borde aparece al pasar el mouse ("↑ Volver a proyectos") ---
 .btn-volver {
     --bs-btn-padding-x: 20px;

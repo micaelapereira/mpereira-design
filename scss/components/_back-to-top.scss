@@ -1,3 +1,48 @@
 // ============================================================
-// VOLVER ARRIBA — botón que aparece después del hero (paso 8)
+// VOLVER ARRIBA — botón fijo abajo a la derecha
+// Aparece cuando el hero sale de la pantalla (scripts/volver-arriba.js)
+// y lleva de vuelta al hero, donde está el menú.
 // ============================================================
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.volver-arriba {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid $color-ink;
+    border-radius: 50%;
+    font-size: 18px;
+    color: $color-ink;
+    text-decoration: none;
+    background: $color-white;
+    box-shadow: 0 6px 18px rgba($color-ink, 0.12);
+    // Oculto (y fuera del orden del teclado) hasta que aparece
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity $transition-base, transform $transition-base, visibility $transition-base;
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    &:hover {
+        color: $color-ink;
+        transform: translateY(-2px);
+    }
+
+    @include mq-max($bp-md-max) {
+        right: 16px;
+        bottom: 16px;
+    }
+}

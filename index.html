@@ -29,7 +29,7 @@
 <body>
 
     <!-- 1. HERO + NAV -->
-    <header class="hero">
+    <header class="hero" id="inicio">
         <nav aria-label="Principal">
             <ul class="nav menu">
                 <li class="nav-item"><a class="nav-link" href="#proyectos">proyectos</a></li>
@@ -402,8 +402,14 @@
             </div>
         </section>
 
-        <!-- 5. SERVICIOS (paso 8) -->
-        <section id="servicios"></section>
+        <!-- 5. SERVICIOS -->
+        <section class="seccion servicios" id="servicios">
+            <div class="ancho-texto">
+                <h2 class="display">Diseño de interfaces, desarrollo web y rediseño de lo que ya existe: tres formas de acompañar tu proyecto, de la idea a la pantalla.</h2>
+                <p>¿Tenés una idea para una web o una app, o algo que ya tenés y no te termina de cerrar? Puedo diseñarlo, construirlo o darle una vuelta nueva, siempre con foco en que sea claro de usar y cumpla su objetivo. Escribime y lo charlamos.</p>
+                <a class="btn btn-durazno" href="#contacto">Contacto</a>
+            </div>
+        </section>
 
         <!-- PRUEBA DEL SISTEMA DE DISEÑO (paso 2) — BORRAR en el paso 10 -->
         <section class="seccion">
@@ -458,11 +464,25 @@
         </div>
     </div>
 
-    <!-- 6. CONTACTO (paso 8) -->
-    <footer id="contacto"></footer>
+    <!-- 6. CONTACTO -->
+    <footer class="contacto" id="contacto">
+        <div class="contacto-inner">
+            <h2 class="display">¿Hablamos?</h2>
+            <div class="contacto-links">
+                <a class="btn btn-naranja btn-contacto" href="mailto:mpereiradesigner@gmail.com">mpereiradesigner@gmail.com</a>
+                <a class="btn btn-lavanda btn-contacto" href="https://www.behance.net/mariamicaelapereira" target="_blank" rel="noopener noreferrer">Behance</a>
+                <a class="btn btn-lima btn-contacto" href="https://www.linkedin.com/in/mariamicaelapereira/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+        <p class="contacto-pie">© 2026 Micaela Pereira · MPereiraDesign</p>
+    </footer>
+
+    <!-- Botón "volver arriba" (aparece después del hero) -->
+    <a class="volver-arriba" href="#inicio" aria-label="Volver arriba">↑</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="scripts/aos-init.js"></script>
-    <script src="scripts/proceso.js"></script></body>
+    <script src="scripts/proceso.js"></script>
+    <script src="scripts/volver-arriba.js"></script></body>
 </html>

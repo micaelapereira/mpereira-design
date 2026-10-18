@@ -1,3 +1,20 @@
 // ============================================================
-// SERVICIOS — título, texto y botón (paso 8)
+// SERVICIOS — título, texto más angosto y botón a Contacto
 // ============================================================
+
+@use "../utilities/variables" as *;
+
+.servicios {
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    p {
+        max-width: 500px;
+        margin: 0 auto 32px;
+        font-size: 15px;
+        line-height: 1.5;
+        color: $color-text;
+        text-wrap: pretty;
+    }
+}
