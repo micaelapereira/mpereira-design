@@ -8,8 +8,10 @@
 @use "../utilities/variables" as *;
 
 .menu {
+    // 8px arriba y abajo agrandan el área para tocar con el dedo sin
+    // cambiar cómo se ve (el padding del menú se achica lo mismo)
     --bs-nav-link-padding-x: 0;
-    --bs-nav-link-padding-y: 0;
+    --bs-nav-link-padding-y: 8px;
     --bs-nav-link-font-size: 12.5px;
     --bs-nav-link-font-weight: 600;
     --bs-nav-link-color: #{$color-ink};
@@ -17,8 +19,8 @@
     justify-content: center;
     // El espacio entre links se achica en celulares chicos para que
     // los 4 entren siempre en una sola línea.
-    gap: 10px clamp(14px, 5vw, 26px);
-    padding: 32px $space-side 0;
+    gap: 0 clamp(14px, 5vw, 26px);
+    padding: 24px $space-side 0;
 
     .nav-link {
         letter-spacing: 0.02em;
@@ -26,6 +28,14 @@
         &:hover {
             text-decoration: underline;
             text-underline-offset: 4px;
+        }
+
+        // Bootstrap marca el foco con un halo azul; usamos el mismo
+        // contorno negro que el resto del sitio
+        &:focus-visible {
+            outline: 2px solid $color-ink;
+            outline-offset: 3px;
+            box-shadow: none;
         }
     }
 }

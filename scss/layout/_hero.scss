@@ -37,6 +37,15 @@
     text-align: left;
 }
 
+// "Ver Proyectos" (principal) y "Contacto" (secundario), uno al lado
+// del otro; si no entran en una fila, el segundo baja
+.hero-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
 .hero-logo {
     margin: 0 0 20px;
     line-height: 0;

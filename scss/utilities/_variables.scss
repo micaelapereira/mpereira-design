@@ -18,12 +18,20 @@ $color-verde: #174418;
 $color-lima: #EEFF9F;
 $color-lavanda: #E7D6FF;
 $color-violeta: #510A32;
+// Sumados en el paso 9 para cumplir el contraste de texto (WCAG AA, 4,5:1)
+$color-durazno-claro: #FFE4D6;
+$color-naranja-oscuro: #CC2500;
+$color-menta: #E0FAEB;
+$color-ciruela: #572551;
 
 // --- Pares de botones y chips: nombre, fondo, texto ---
-// Se recorren con @each para generar .btn-naranja, .chip-naranja, etc.
+// Se recorren con @each para generar .btn-lima, .chip-lima, etc.
+// Al lado, el contraste del texto (WCAG AA pide 4,5:1 o más).
 $pares: (
-    naranja $color-naranja $color-durazno,
-    durazno $color-durazno $color-naranja,
+    durazno-claro $color-durazno-claro $color-naranja-oscuro, //  4,51:1 · "Ver Proyectos" y "Contacto" de Servicios (justo: no aclarar el naranja)
+    menta $color-menta $color-ciruela,                        // 10,64:1 · mail en Contacto
+    naranja $color-naranja $color-durazno,                    //  2,43:1 · no cumple; sin uso (se borra en el paso 10)
+    durazno $color-durazno $color-naranja,                    //  2,43:1 · no cumple; sin uso (se borra en el paso 10)
     lima $color-lima $color-violeta,
     verde $color-verde $color-lima,
     lavanda $color-lavanda $color-violeta,

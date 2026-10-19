@@ -42,10 +42,16 @@
     @include boton-par(transparent, $color-ink, $color-ink);
 }
 
-// --- Contacto: más grandes y a todo el ancho de su columna ---
+// --- Contacto: más grandes, a todo el ancho de su columna y con un
+// borde de 2px del color del texto (así se recortan sobre la foto) ---
 .btn-contacto {
-    --bs-btn-padding-y: 15px;
+    --bs-btn-padding-x: 26px;
+    --bs-btn-padding-y: 13px;  // 2px menos por el borde: el tamaño no cambia
     --bs-btn-font-size: 15px;
+    --bs-btn-border-width: 2px;
+    --bs-btn-border-color: var(--bs-btn-color);
+    --bs-btn-hover-border-color: var(--bs-btn-color);
+    --bs-btn-active-border-color: var(--bs-btn-color);
     display: block;
 }
 

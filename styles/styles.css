@@ -72,14 +72,14 @@ h4 {
 
 .menu {
   --bs-nav-link-padding-x: 0;
-  --bs-nav-link-padding-y: 0;
+  --bs-nav-link-padding-y: 8px;
   --bs-nav-link-font-size: 12.5px;
   --bs-nav-link-font-weight: 600;
   --bs-nav-link-color: #141311;
   --bs-nav-link-hover-color: #141311;
   justify-content: center;
-  gap: 10px clamp(14px, 5vw, 26px);
-  padding: 32px 5vw 0;
+  gap: 0 clamp(14px, 5vw, 26px);
+  padding: 24px 5vw 0;
 }
 .menu .nav-link {
   letter-spacing: 0.02em;
@@ -87,6 +87,11 @@ h4 {
 .menu .nav-link:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+.menu .nav-link:focus-visible {
+  outline: 2px solid #141311;
+  outline-offset: 3px;
+  box-shadow: none;
 }
 
 .hero {
@@ -129,6 +134,13 @@ h4 {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+}
+
+.hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
 .hero-logo {
@@ -240,6 +252,30 @@ h4 {
   box-shadow: none;
 }
 
+.btn-durazno-claro {
+  --bs-btn-color: #CC2500;
+  --bs-btn-bg: #FFE4D6;
+  --bs-btn-border-color: #FFE4D6;
+  --bs-btn-hover-color: #CC2500;
+  --bs-btn-hover-bg: #FFE4D6;
+  --bs-btn-hover-border-color: #FFE4D6;
+  --bs-btn-active-color: #CC2500;
+  --bs-btn-active-bg: #FFE4D6;
+  --bs-btn-active-border-color: #FFE4D6;
+}
+
+.btn-menta {
+  --bs-btn-color: #572551;
+  --bs-btn-bg: #E0FAEB;
+  --bs-btn-border-color: #E0FAEB;
+  --bs-btn-hover-color: #572551;
+  --bs-btn-hover-bg: #E0FAEB;
+  --bs-btn-hover-border-color: #E0FAEB;
+  --bs-btn-active-color: #572551;
+  --bs-btn-active-bg: #E0FAEB;
+  --bs-btn-active-border-color: #E0FAEB;
+}
+
 .btn-naranja {
   --bs-btn-color: #FFD6C0;
   --bs-btn-bg: #FF5027;
@@ -313,8 +349,13 @@ h4 {
 }
 
 .btn-contacto {
-  --bs-btn-padding-y: 15px;
+  --bs-btn-padding-x: 26px;
+  --bs-btn-padding-y: 13px;
   --bs-btn-font-size: 15px;
+  --bs-btn-border-width: 2px;
+  --bs-btn-border-color: var(--bs-btn-color);
+  --bs-btn-hover-border-color: var(--bs-btn-color);
+  --bs-btn-active-border-color: var(--bs-btn-color);
   display: block;
 }
 
@@ -345,6 +386,16 @@ h4 {
   font-weight: 600;
   line-height: normal;
   text-decoration: none;
+}
+
+.chip-durazno-claro {
+  background-color: #FFE4D6;
+  color: #CC2500;
+}
+
+.chip-menta {
+  background-color: #E0FAEB;
+  color: #572551;
 }
 
 .chip-naranja {
@@ -711,6 +762,7 @@ h4 {
   border-radius: 50%;
   background-color: #fff;
   opacity: 1;
+  --bs-btn-close-focus-shadow: 0 0 0 2px #141311;
 }
 
 .sobre-mi {
