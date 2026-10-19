@@ -2,12 +2,16 @@
 // NAV — menú del hero
 // Usa el componente .nav de Bootstrap (lista de links en fila),
 // reestilizado con sus variables CSS. Cada link baja con scroll
-// suave a su sección.
+// suave a su sección. Al final, el cambio de idioma ES / EN.
 // ============================================================
 
 @use "../utilities/variables" as *;
 
 .menu {
+    // Espacio entre links: se achica en celulares chicos para que
+    // todo entre siempre en una sola línea. Lo usan también los puntos
+    // y el separador del idioma, por eso va en una variable.
+    --menu-gap: clamp(14px, 5vw, 26px);
     // 8px arriba y abajo agrandan el área para tocar con el dedo sin
     // cambiar cómo se ve (el padding del menú se achica lo mismo)
     --bs-nav-link-padding-x: 0;
@@ -16,10 +20,9 @@
     --bs-nav-link-font-weight: 600;
     --bs-nav-link-color: #{$color-ink};
     --bs-nav-link-hover-color: #{$color-ink};
+    align-items: center;
     justify-content: center;
-    // El espacio entre links se achica en celulares chicos para que
-    // los 4 entren siempre en una sola línea.
-    gap: 0 clamp(14px, 5vw, 26px);
+    gap: 0 var(--menu-gap);
     padding: 24px $space-side 0;
 
     .nav-link {
@@ -36,6 +39,58 @@
             outline: 2px solid $color-ink;
             outline-offset: 3px;
             box-shadow: none;
+        }
+    }
+
+    // --- Punto medio entre los links (proyectos · sobre mí · servicios) ---
+    // Va en el espacio entre links, fuera del área clickeable, y el
+    // "/ ''" hace que los lectores de pantalla no lo lean
+    .nav-item + .nav-item:not(.idioma) {
+        position: relative;
+
+        &::before {
+            content: "·" / "";
+            position: absolute;
+            top: 50%;
+            left: calc(var(--menu-gap) / -2);
+            font-size: 20px;
+            line-height: 1;
+            color: $color-ink-muted;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+    }
+}
+
+// --- Cambio de idioma: discreto, como texto del menú ---
+// Cada opción es un link a la otra página (/ y /en/). El idioma
+// actual va en negro y subrayado; el otro, en gris claro.
+.idioma {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: calc(var(--menu-gap) * -0.25);
+    padding-left: calc(var(--menu-gap) * 0.75);
+    border-left: 1px solid $color-hairline;
+
+    a {
+        padding: 8px 4px;
+        font-size: 12.5px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        color: $color-ink-muted;
+        text-decoration: none;
+        opacity: 0.55;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &[aria-current="page"] {
+            color: $color-ink;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            opacity: 1;
         }
     }
 }

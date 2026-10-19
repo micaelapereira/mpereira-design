@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Versión en inglés. Los textos se traducen a mano: si cambiás algo en ../index.html, actualizalo también acá. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Micaela Pereira | UI/UX Designer & Front-End Developer</title>
+    <meta name="description" content="I'm Micaela Pereira, a UI/UX designer and front-end developer. I design and build websites and apps that look great, feel intuitive and work without friction. Take a look at my work and get in touch." />
+    <meta name="author" content="Micaela Pereira" />
+
+    <!-- Cómo se ve el link al compartirlo en redes.
+         og:image necesita la dirección completa (https://dominio/img/og-image.jpg):
+         se suma en la Fase 4, cuando tengamos el dominio. -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Micaela Pereira | UI/UX Designer & Front-End Developer" />
+    <meta property="og:description" content="I design and build websites and apps that look great, feel intuitive and work without friction." />
+    <meta property="og:locale" content="en_US" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png" />
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700;800&family=Bricolage+Grotesque:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+</head>
+<body>
+
+    <!-- 1. HERO + NAV -->
+    <header class="hero" id="inicio">
+        <nav aria-label="Main">
+            <ul class="nav menu">
+                <li class="nav-item"><a class="nav-link" href="#proyectos">projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre-mi">about</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicios">services</a></li>
+                <li class="nav-item idioma">
+                    <a href="../" lang="es" hreflang="es" aria-label="Español">ES</a>
+                    <a href="./" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="hero-inner">
+            <div class="hero-id">
+                <h1 class="hero-logo">
+                    <img src="../img/logo-micaela-pereira.webp" srcset="../img/logo-micaela-pereira-480.webp 480w, ../img/logo-micaela-pereira.webp 960w" sizes="(max-width: 767px) 90vw, 34vw" alt="Micaela Pereira" width="960" height="254" fetchpriority="high" />
+                </h1>
+                <p class="kicker">UI/UX Designer &amp; <span class="text-nowrap">Front-End Developer</span></p>
+            </div>
+            <div class="hero-acciones">
+                <a class="btn btn-durazno-claro" href="#proyectos">View Projects</a>
+                <a class="btn btn-lavanda" href="#contacto">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. MIS PROYECTOS · collage -->
+        <section class="collage" id="proyectos">
+            <h2>My Projects</h2>
+
+            <div class="collage-grid">
+                <div class="row gy-5 gx-lg-5 align-items-start">
+
+                    <div class="col-12 col-lg-4 collage-col">
+                        <p class="eyebrow">Design + Web Development</p>
+                        <a class="collage-img" href="#delos" tabindex="-1" aria-hidden="true">
+                            <img src="../img/collage-delos.webp" srcset="../img/collage-delos-600.webp 600w, ../img/collage-delos.webp 1200w" sizes="(max-width: 991px) 90vw, 370px" alt="" width="1200" height="1055" loading="lazy" />
+                        </a>
+                        <a class="chip chip-lima" href="#delos">Delos Coffee House</a>
+                        <ul class="tags">
+                            <li class="tag">HTML/SCSS</li>
+                            <li class="tag">Bootstrap 5</li>
+                            <li class="tag">Responsive</li>
+                            <li class="tag">Specialty coffee</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-4 collage-col escalon-alto">
+                        <p class="eyebrow">UI/UX Design + Prototype</p>
+                        <a class="collage-img" href="#agenda-om" tabindex="-1" aria-hidden="true">
+                            <img src="../img/collage-agenda-om.webp" alt="" width="761" height="764" loading="lazy" />
+                        </a>
+                        <a class="chip chip-verde" href="#agenda-om">Agenda OM</a>
+                        <ul class="tags">
+                            <li class="tag">Benchmarking</li>
+                            <li class="tag">Research</li>
+                            <li class="tag">Interviews</li>
+                            <li class="tag">MVP</li>
+                            <li class="tag">Wireframing</li>
+                            <li class="tag">Prototyping</li>
+                            <li class="tag">Testing</li>
+                            <li class="tag">Wellness</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-lg-4 collage-col escalon-bajo">
+                        <p class="eyebrow">Design + Web Development</p>
+                        <a class="collage-img" href="#mpereira" tabindex="-1" aria-hidden="true">
+                            <div class="tile-proximamente">Coming soon</div>
+                        </a>
+                        <a class="chip chip-lavanda" href="#mpereira">MPereiraDesign</a>
+                        <ul class="tags">
+                            <li class="tag">HTML/SCSS</li>
+                            <li class="tag">Bootstrap 5</li>
+                            <li class="tag">Responsive</li>
+                            <li class="tag">Professional website</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3a. DELOS COFFEE HOUSE -->
+        <section class="seccion proyecto" id="delos">
+            <span class="chip chip-lima">Delos Coffee House</span>
+            <div class="ancho-texto">
+                <h2 class="display">A riverside café, told through a website.</h2>
+                <ul class="tags">
+                    <li class="tag">HTML/SCSS</li>
+                    <li class="tag">Bootstrap 5</li>
+                    <li class="tag">Responsive</li>
+                    <li class="tag">Specialty coffee</li>
+                </ul>
+            </div>
+
+            <div class="ancho-media">
+                <div data-aos="fade-up">
+                    <img class="img-principal lift" src="../img/delos-desktop-home.webp" srcset="../img/delos-desktop-home-1040.webp 1040w, ../img/delos-desktop-home.webp 2080w" sizes="(max-width: 1094px) 90vw, 1040px" width="2080" height="1174" loading="lazy" alt="Delos Coffee House home page on desktop: a woman drinks coffee by the window, with the headline “Café de especialidad junto al río” and the buttons “Ver la carta” and “Cómo llegar”." />
+                </div>
+                <div class="capturas">
+                    <div data-aos="fade-up" data-aos-delay="150">
+                        <img class="lift" src="../img/delos-desktop-menu.webp" srcset="../img/delos-desktop-menu-600.webp 600w, ../img/delos-desktop-menu.webp 1208w" sizes="(max-width: 767px) 90vw, (max-width: 1094px) 45vw, 510px" width="1208" height="760" loading="lazy" alt="The site's “Nuestra carta” (menu) page, with a latte art coffee and a cinnamon roll on a wooden table." />
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <img class="lift" src="../img/delos-mobile-tres-pantallas.webp" srcset="../img/delos-mobile-tres-pantallas-550.webp 550w, ../img/delos-mobile-tres-pantallas.webp 1099w" sizes="(max-width: 767px) 90vw, (max-width: 1094px) 45vw, 510px" width="1099" height="682" loading="lazy" alt="The site on three phones: the home page, the contact page and the “Nuestro espacio” gallery." />
+                    </div>
+                </div>
+            </div>
+
+            <div class="ancho-texto texto">
+                <p>Delos Coffee House is a specialty coffee shop in Tigre, Buenos Aires. It was my final project for the Web Development course: a five-page, fully responsive site with a modular SCSS architecture (partials, variables and mixins) built on Bootstrap, SEO tailored to each page, and animations made with native transitions and AOS.</p>
+                <p>The challenge was to capture everything you feel when you visit Delos: its style, the menu, the design of the space, the riverside setting, and the care and dedication of its team. So that anyone browsing the site gets a taste of that experience and leaves with a lovely memory of it.</p>
+                <div class="acciones">
+                    <a class="btn btn-lima" href="https://proyecto-final-delos-coffee.vercel.app/" target="_blank" rel="noopener noreferrer">View live site</a>
+                    <a class="btn btn-linea" href="https://github.com/micaelapereira/proyecto-final-delos-coffee" target="_blank" rel="noopener noreferrer">View code</a>
+                </div>
+                <div class="volver"><a class="btn btn-volver" href="#proyectos">↑ Back to projects</a></div>
+            </div>
+        </section>
+
+        <!-- 3b. AGENDA OM -->
+        <section class="seccion proyecto" id="agenda-om">
+            <span class="chip chip-verde">Agenda OM</span>
+            <div class="ancho-texto">
+                <h2 class="display">Booking a moment of wellbeing, made easy.</h2>
+                <ul class="tags tags-angostas">
+                    <li class="tag">Benchmarking</li>
+                    <li class="tag">Research</li>
+                    <li class="tag">Interviews</li>
+                    <li class="tag">MVP</li>
+                    <li class="tag">Wireframing</li>
+                    <li class="tag">Prototyping</li>
+                    <li class="tag">Testing</li>
+                    <li class="tag">Wellness</li>
+                </ul>
+            </div>
+
+            <div class="ancho-media">
+                <div data-aos="fade-up">
+                    <img class="img-principal lift-soft" src="../img/agenda-portada.webp" srcset="../img/agenda-portada-1040.webp 1040w, ../img/agenda-portada.webp 2080w" sizes="(max-width: 1094px) 90vw, 1040px" width="2080" height="1432" loading="lazy" alt="Agenda OM on several phones: the cover with the logo over a bright yoga studio and, next to it, screens for search, reiki activities and available times." />
+                </div>
+
+                <!-- Recorrido de una reserva, pantalla por pantalla -->
+                <ol class="flow">
+                    <li data-aos="fade-up">
+                        <figure>
+                            <img class="lift-soft" src="../img/agenda-pantalla-1.webp" width="338" height="678" loading="lazy" alt="Agenda OM welcome screen on a green background, with the “Comenzar” (Start) button." />
+                            <figcaption>1. Welcome</figcaption>
+                        </figure>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="150">
+                        <figure>
+                            <img class="lift-soft" src="../img/agenda-pantalla-2.webp" width="339" height="683" loading="lazy" alt="Agenda OM home screen: Yoga, Reiki, Gatherings and Meditation categories, search, direct booking and recommendations." />
+                            <figcaption>2. Explore</figcaption>
+                        </figure>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="300">
+                        <figure>
+                            <img class="lift-soft" src="../img/agenda-pantalla-3.webp" width="338" height="677" loading="lazy" alt="Yoga and Meditation class details with available times by day." />
+                            <figcaption>3. Pick a time</figcaption>
+                        </figure>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="450">
+                        <figure>
+                            <img class="lift-soft" src="../img/agenda-pantalla-4.webp" width="338" height="677" loading="lazy" alt="Booking confirmed screen with booking number, activity, place, date and time." />
+                            <figcaption>4. Booking confirmed</figcaption>
+                        </figure>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="ancho-texto texto">
+                <p>Agenda OM is an app for booking wellness experiences: massages, reiki, family constellations and holistic group gatherings. It was my final project for the UX/UI Design course.</p>
+                <p>The challenge was to make a single app work for both one-on-one sessions and group gatherings, and to keep booking simple and frictionless.</p>
+            </div>
+
+            <!-- Proceso: Carousel de Bootstrap + scripts/proceso.js -->
+            <div class="ancho-media proceso">
+                <h3>Agenda OM mobile app process</h3>
+
+                <div id="carousel-proceso" class="carousel slide carousel-proceso" data-bs-interval="false" data-bs-wrap="false" role="region" aria-roledescription="carousel" aria-label="Agenda OM process, 5 stages. Use the arrow keys to move through them.">
+                    <div class="proceso-head">
+                        <div class="etapas">
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="0" aria-current="true">1 · Research</button>
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="1" aria-current="false">2 · Define</button>
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="2" aria-current="false">3 · Structure</button>
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="3" aria-current="false">4 · Design</button>
+                            <button type="button" class="etapa" data-bs-target="#carousel-proceso" data-bs-slide-to="4" aria-current="false">5 · Validate</button>
+                        </div>
+                        <p class="proceso-ayuda">Open any slide to see it full size</p>
+                    </div>
+
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active" role="group" aria-roledescription="stage" aria-label="1 of 5: Research">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">1</div>
+                                    <h4>Research</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Market research</li>
+                                        <li class="tag">Benchmarking</li>
+                                        <li class="tag">2 user personas</li>
+                                    </ul>
+                                    <p>I started by understanding the landscape: I researched the wellness experiences market, compared how other apps handle bookings, and created two user personas to always keep in mind who I was designing for.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-benchmarking.webp" width="687" height="766" loading="lazy" alt="Benchmarking of Bookyway, Mindbody and ClassPass: key features, navigation, strengths and weaknesses of each." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-user-personas.webp" width="687" height="757" loading="lazy" alt="The two user personas: goals, challenges, objections and where they would look for information." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" role="group" aria-roledescription="stage" aria-label="2 of 5: Define">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">2</div>
+                                    <h4>Define</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Problem, goal and solution</li>
+                                        <li class="tag">Storytelling</li>
+                                        <li class="tag">POV</li>
+                                        <li class="tag">MVP</li>
+                                    </ul>
+                                    <p>With that foundation, I defined the problem, the goal and the solution, and told them as a story so I'd never lose sight of the people. That led to the point of view (POV) and the MVP: the minimum the app had to get right.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-problema-objetivo-solucion.webp" width="687" height="762" loading="lazy" alt="Agenda OM's problem, goal and solution." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-pov-mvp.webp" width="687" height="763" loading="lazy" alt="User point of view and minimum viable product: launch version and desired features." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" role="group" aria-roledescription="stage" aria-label="3 of 5: Structure">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">3</div>
+                                    <h4>Structure</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Card sorting</li>
+                                        <li class="tag">Information architecture</li>
+                                        <li class="tag">Taskflow</li>
+                                        <li class="tag">Userflow</li>
+                                    </ul>
+                                    <p>I organized the app's content through a card sorting exercise, which shaped the information architecture, and mapped out the taskflow and userflow so booking would be a clear path from start to finish.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-arquitectura-informacion.webp" width="687" height="670" loading="lazy" alt="Information architecture map of the app, by section." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-taskflow-userflow.webp" width="687" height="693" loading="lazy" alt="Taskflow of a booking, from opening the app to getting the confirmation, and the participant's userflow." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" role="group" aria-roledescription="stage" aria-label="4 of 5: Design">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">4</div>
+                                    <h4>Design</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Sketches</li>
+                                        <li class="tag">High-fidelity wireframes</li>
+                                        <li class="tag">UI Kit</li>
+                                        <li class="tag">Heuristic evaluation</li>
+                                    </ul>
+                                    <p>I went from early sketches to high-fidelity digital wireframes, built a UI Kit to keep everything consistent, and reviewed the design with a heuristic evaluation.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina lamina-moodboard" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-moodboard.webp" width="687" height="495" loading="lazy" alt="Agenda OM moodboard: plants, yoga spaces, rituals and the brand's green palette." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-wireframes-baja.webp" width="687" height="729" loading="lazy" alt="Hand-drawn wireframes, low-fidelity digital wireframes and wireframes on iOS grids, screen by screen." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-wireframes-media-alta.webp" width="687" height="747" loading="lazy" alt="Three iterations of mid-fidelity wireframes, up to the version with images and color." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" role="group" aria-roledescription="stage" aria-label="5 of 5: Validate">
+                            <div class="fase">
+                                <div>
+                                    <div class="numero">5</div>
+                                    <h4>Validate</h4>
+                                    <ul class="tags">
+                                        <li class="tag">Usability test with 5 users</li>
+                                        <li class="tag">Interview script</li>
+                                        <li class="tag">Satisfaction surveys</li>
+                                        <li class="tag">Efficiency and effectiveness metrics</li>
+                                        <li class="tag">Executive summary</li>
+                                    </ul>
+                                    <p>I tested the final prototype with 5 users, using an interview script, satisfaction surveys and efficiency and effectiveness metrics. All five completed the three tasks, and confirming a booking took just a few seconds. Finding a class was the hardest part, which led to the recommendations in the executive summary, such as bringing all the filters together at the top of the home screen.</p>
+                                </div>
+                                <div class="fase-laminas">
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-prueba-usabilidad.webp" width="687" height="764" loading="lazy" alt="Usability test metrics: the 3 tasks completed by the 5 users, with times and number of steps." />
+                                    </button>
+                                    <button type="button" class="lamina" data-bs-toggle="modal" data-bs-target="#visor">
+                                        <img src="../img/proceso-metricas-resumen.webp" width="687" height="777" loading="lazy" alt="Satisfaction metrics in four pie charts and the test's executive summary: what worked, what didn't and the recommendations." />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="acciones acciones-final">
+                <a class="btn btn-verde" href="https://www.behance.net/gallery/215972661/Agenda-OM-Mobile-App-Diseno-UX-UI-Coderhouse" target="_blank" rel="noopener noreferrer">View full case study on Behance</a>
+            </div>
+            <div class="volver"><a class="btn btn-volver" href="#proyectos">↑ Back to projects</a></div>
+        </section>
+
+        <!-- 3c. MPEREIRADESIGN -->
+        <section class="seccion proyecto" id="mpereira">
+            <span class="chip chip-lavanda">MPereiraDesign</span>
+            <div class="ancho-texto">
+                <h2 class="display">This site, from idea to code.</h2>
+                <ul class="tags">
+                    <li class="tag">HTML/SCSS</li>
+                    <li class="tag">Bootstrap 5</li>
+                    <li class="tag">Responsive</li>
+                    <li class="tag">Professional website</li>
+                </ul>
+            </div>
+
+            <!-- Placeholder: se reemplaza por una imagen del sitio publicado (Fase 4) -->
+            <div class="ancho-media">
+                <div data-aos="fade-up">
+                    <div class="placeholder-principal">Image: this site, once it's live</div>
+                </div>
+            </div>
+
+            <div class="ancho-texto texto">
+                <p>This portfolio is one of my projects too: I designed and built it from start to finish. Once it's live, you'll be able to see the whole process here.</p>
+                <div class="proximamente"><span class="tag">Coming soon</span></div>
+                <div class="volver"><a class="btn btn-volver" href="#proyectos">↑ Back to projects</a></div>
+            </div>
+        </section>
+
+        <!-- 4. SOBRE MÍ -->
+        <section class="seccion sobre-mi" id="sobre-mi">
+            <div class="ancho-texto">
+                <h2 class="visually-hidden">About me</h2>
+                <figure class="cita">
+                    <blockquote>“I like things to look beautiful, with thoughtful, creative design — but above all, I want them to work. To be intuitive, natural, frictionless. For people to enjoy using them and want to keep exploring.”</blockquote>
+                    <figcaption>
+                        <img src="../img/logo-micaela-pereira.webp" width="960" height="254" loading="lazy" alt="Micaela Pereira" />
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Imágenes decorativas de los proyectos -->
+            <div class="flotantes" aria-hidden="true">
+                <img class="flotante img-celular-agenda" src="../img/sobre-mi-celular-agenda.webp" width="213" height="314" loading="lazy" alt="" />
+                <img class="flotante img-celular-delos" src="../img/sobre-mi-celular-delos.webp" width="228" height="379" loading="lazy" alt="" />
+                <img class="flotante img-mano" src="../img/sobre-mi-mano-agenda.webp" width="600" height="567" loading="lazy" alt="" />
+                <img class="flotante img-laptop" src="../img/sobre-mi-laptop-delos.webp" width="386" height="289" loading="lazy" alt="" />
+                <img class="flotante img-escritorio" src="../img/sobre-mi-escritorio-agenda.webp" width="300" height="450" loading="lazy" alt="" />
+            </div>
+        </section>
+
+        <!-- 5. SERVICIOS -->
+        <section class="seccion servicios" id="servicios">
+            <div class="ancho-texto">
+                <h2 class="display">Interface design, web development, and redesigning what already exists: three ways to support your project, from idea to screen.</h2>
+                <p>Have an idea for a website or an app, or something you already have that doesn't quite feel right? I can design it, build it, or give it a fresh take, always focused on making it easy to use and true to its purpose. Write to me and let's talk it through.</p>
+                <a class="btn btn-durazno-claro" href="#contacto">Contact</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- VISOR DE LÁMINAS (Modal de Bootstrap). scripts/proceso.js pone la imagen elegida -->
+    <div class="modal fade visor" id="visor" tabindex="-1" role="dialog" aria-label="Process slide, full size" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <img class="visor-img" src="../img/proceso-benchmarking.webp" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. CONTACTO -->
+    <footer class="contacto" id="contacto">
+        <div class="contacto-inner">
+            <h2 class="display">Let's talk.</h2>
+            <div class="contacto-links">
+                <a class="btn btn-menta btn-contacto" href="mailto:mpereiradesigner@gmail.com">mpereiradesigner@gmail.com</a>
+                <a class="btn btn-lavanda btn-contacto" href="https://www.behance.net/mariamicaelapereira" target="_blank" rel="noopener noreferrer">Behance</a>
+                <a class="btn btn-lima btn-contacto" href="https://www.linkedin.com/in/mariamicaelapereira/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+        <p class="contacto-pie">© 2026 Micaela Pereira · MPereiraDesign</p>
+    </footer>
+
+    <!-- Botón "volver arriba" (aparece después del hero) -->
+    <a class="volver-arriba" href="#inicio" aria-label="Back to top">↑</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../scripts/aos-init.js"></script>
+    <script src="../scripts/proceso.js"></script>
+    <script src="../scripts/volver-arriba.js"></script></body>
+</html>

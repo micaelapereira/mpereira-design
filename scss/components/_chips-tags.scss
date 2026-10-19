@@ -6,6 +6,7 @@
 
 @use "sass:list";
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
 
 .chip {
     display: inline-block;
@@ -36,6 +37,22 @@
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+// Fila más angosta: las 8 tags de Agenda OM se reparten en dos filas
+// parejas de 4, en lugar de dejar una sola en la segunda línea
+.tags-angostas {
+    max-width: 400px;
+    margin-inline: auto;
+
+    // En celular, un poco menos de aire para que entren 4 por fila
+    @include mq-max($bp-md-max) {
+        gap: 6px;
+
+        .tag {
+            padding-inline: 10px;
+        }
+    }
 }
 
 .tag {
