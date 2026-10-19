@@ -1,14 +1,18 @@
 // ============================================================
 // FLOW — recorrido de 4 pantallas de Agenda OM
-// Siempre una sola fila de 4. Ocupa el 76% del ancho, un poco
-// menos que los tres celulares de la portada que tiene arriba.
+// Siempre una sola fila de 4. En compu ocupa el 76% del ancho,
+// un poco menos que los tres celulares de la portada que tiene arriba.
 // ============================================================
 
 @use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
 
 .flow {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // minmax(0, 1fr) y no solo 1fr: con 1fr, una columna no se achica
+    // más que su palabra más larga ("Bienvenida", "confirmada") y las
+    // cuatro pantallas quedaban de distinto tamaño en celular
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2.5%;
     width: 76%;
     margin: 40px auto 0;
@@ -23,5 +27,16 @@
         margin-top: 10px;
         font-size: 12.5px;
         color: $color-ink-muted;
+    }
+
+    // En celular la fila usa todo el ancho y los pies de foto se achican
+    // un poco, así cada palabra entra en su columna
+    @include mq-max($bp-md-max) {
+        width: 100%;
+
+        figcaption {
+            font-size: 11.5px;
+            line-height: 1.35;
+        }
     }
 }

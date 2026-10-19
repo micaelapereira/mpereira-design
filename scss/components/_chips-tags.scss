@@ -4,6 +4,7 @@
 // Tag: etiqueta con borde fino, sin relleno.
 // ============================================================
 
+@use "sass:list";
 @use "../utilities/variables" as *;
 
 .chip {
@@ -16,11 +17,13 @@
     text-decoration: none;
 }
 
-// --- .chip-naranja, .chip-lima, .chip-verde, etc. ---
+// --- .chip-lima, .chip-verde y .chip-lavanda (solo los colores de $colores-chip) ---
 @each $nombre, $fondo, $texto in $pares {
-    .chip-#{$nombre} {
-        background-color: $fondo;
-        color: $texto;
+    @if list.index($colores-chip, $nombre) {
+        .chip-#{$nombre} {
+            background-color: $fondo;
+            color: $texto;
+        }
     }
 }
 

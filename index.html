@@ -21,6 +21,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700;800&family=Bricolage+Grotesque:wght@400;500;600&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -41,7 +42,7 @@
         <div class="hero-inner">
             <div class="hero-id">
                 <h1 class="hero-logo">
-                    <img src="img/logo-micaela-pereira.webp" alt="Micaela Pereira" width="960" height="254" fetchpriority="high" />
+                    <img src="img/logo-micaela-pereira.webp" srcset="img/logo-micaela-pereira-480.webp 480w, img/logo-micaela-pereira.webp 960w" sizes="(max-width: 767px) 90vw, 34vw" alt="Micaela Pereira" width="960" height="254" fetchpriority="high" />
                 </h1>
                 <p class="kicker">UI/UX Designer &amp; <span class="text-nowrap">Front-End Developer</span></p>
             </div>
@@ -63,7 +64,7 @@
                     <div class="col-12 col-lg-4 collage-col">
                         <p class="eyebrow">Diseño + Desarrollo web</p>
                         <a class="collage-img" href="#delos" tabindex="-1" aria-hidden="true">
-                            <img src="img/collage-delos.webp" alt="" width="1200" height="1055" loading="lazy" />
+                            <img src="img/collage-delos.webp" srcset="img/collage-delos-600.webp 600w, img/collage-delos.webp 1200w" sizes="(max-width: 991px) 90vw, 370px" alt="" width="1200" height="1055" loading="lazy" />
                         </a>
                         <a class="chip chip-lima" href="#delos">Delos Coffee House</a>
                         <ul class="tags">
@@ -125,14 +126,14 @@
 
             <div class="ancho-media">
                 <div data-aos="fade-up">
-                    <img class="img-principal lift" src="img/delos-desktop-home.webp" width="2080" height="1174" loading="lazy" alt="Inicio del sitio de Delos Coffee House en escritorio: una mujer toma café junto a la ventana y el título Café de especialidad junto al río, con los botones Ver la carta y Cómo llegar." />
+                    <img class="img-principal lift" src="img/delos-desktop-home.webp" srcset="img/delos-desktop-home-1040.webp 1040w, img/delos-desktop-home.webp 2080w" sizes="(max-width: 1094px) 90vw, 1040px" width="2080" height="1174" loading="lazy" alt="Inicio del sitio de Delos Coffee House en escritorio: una mujer toma café junto a la ventana y el título Café de especialidad junto al río, con los botones Ver la carta y Cómo llegar." />
                 </div>
                 <div class="capturas">
                     <div data-aos="fade-up" data-aos-delay="150">
-                        <img class="lift" src="img/delos-desktop-menu.webp" width="1208" height="760" loading="lazy" alt="Página Nuestra carta del sitio, con un café con arte latte y un rol de canela sobre una mesa de madera." />
+                        <img class="lift" src="img/delos-desktop-menu.webp" srcset="img/delos-desktop-menu-600.webp 600w, img/delos-desktop-menu.webp 1208w" sizes="(max-width: 767px) 90vw, (max-width: 1094px) 45vw, 510px" width="1208" height="760" loading="lazy" alt="Página Nuestra carta del sitio, con un café con arte latte y un rol de canela sobre una mesa de madera." />
                     </div>
                     <div data-aos="fade-up" data-aos-delay="300">
-                        <img class="lift" src="img/delos-mobile-tres-pantallas.webp" width="1099" height="682" loading="lazy" alt="El sitio en tres celulares: el inicio, la página de contacto y la galería Nuestro espacio." />
+                        <img class="lift" src="img/delos-mobile-tres-pantallas.webp" srcset="img/delos-mobile-tres-pantallas-550.webp 550w, img/delos-mobile-tres-pantallas.webp 1099w" sizes="(max-width: 767px) 90vw, (max-width: 1094px) 45vw, 510px" width="1099" height="682" loading="lazy" alt="El sitio en tres celulares: el inicio, la página de contacto y la galería Nuestro espacio." />
                     </div>
                 </div>
             </div>
@@ -167,7 +168,7 @@
 
             <div class="ancho-media">
                 <div data-aos="fade-up">
-                    <img class="img-principal lift-soft" src="img/agenda-portada.webp" width="2080" height="1432" loading="lazy" alt="Agenda OM en varios celulares: la portada con el logo sobre un salón de yoga luminoso y, al lado, pantallas de búsqueda, actividades de reiki y horarios disponibles." />
+                    <img class="img-principal lift-soft" src="img/agenda-portada.webp" srcset="img/agenda-portada-1040.webp 1040w, img/agenda-portada.webp 2080w" sizes="(max-width: 1094px) 90vw, 1040px" width="2080" height="1432" loading="lazy" alt="Agenda OM en varios celulares: la portada con el logo sobre un salón de yoga luminoso y, al lado, pantallas de búsqueda, actividades de reiki y horarios disponibles." />
                 </div>
 
                 <!-- Recorrido de una reserva, pantalla por pantalla -->
@@ -412,52 +413,10 @@
                 <a class="btn btn-durazno-claro" href="#contacto">Contacto</a>
             </div>
         </section>
-
-        <!-- PRUEBA DEL SISTEMA DE DISEÑO (paso 2) — BORRAR en el paso 10 -->
-        <section class="seccion">
-            <div class="ancho-texto">
-                <p class="eyebrow">Eyebrow · Diseño + Desarrollo web</p>
-                <h2 class="display">Una cafetería frente al río, contada en una web.</h2>
-                <p class="kicker" style="margin-top:20px">UI/UX Designer &amp; Front-End Developer</p>
-                <div class="texto">
-                    <p>Párrafo de proyecto: Delos Coffee House es una cafetería de especialidad en Tigre, Buenos Aires. Fue mi proyecto final del curso de Desarrollo Web: un sitio de cinco páginas, 100% responsive.</p>
-                </div>
-
-                <p class="eyebrow" style="margin-top:48px">Botones de color</p>
-                <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a class="btn btn-naranja" href="#">Ver Proyectos</a>
-                    <a class="btn btn-durazno" href="#">Contacto</a>
-                    <a class="btn btn-lima" href="#">Ver sitio en vivo</a>
-                    <a class="btn btn-verde" href="#">Ver caso completo en Behance</a>
-                    <a class="btn btn-lavanda" href="#">Behance</a>
-                </div>
-
-                <p class="eyebrow" style="margin-top:32px">Botón de línea y volver</p>
-                <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <a class="btn btn-linea" href="#">Ver código</a>
-                    <a class="btn btn-volver" href="#">↑ Volver a proyectos</a>
-                </div>
-
-                <p class="eyebrow" style="margin-top:32px">Chips</p>
-                <div class="d-flex flex-wrap justify-content-center gap-2">
-                    <a class="chip chip-lima" href="#">Delos Coffee House</a>
-                    <a class="chip chip-verde" href="#">Agenda OM</a>
-                    <a class="chip chip-lavanda" href="#">MPereiraDesign</a>
-                </div>
-
-                <p class="eyebrow" style="margin-top:32px">Tags</p>
-                <ul class="tags">
-                    <li class="tag">HTML/SCSS</li>
-                    <li class="tag">Bootstrap 5</li>
-                    <li class="tag">Responsive</li>
-                    <li class="tag">Café de especialidad</li>
-                </ul>
-            </div>
-        </section>
     </main>
 
     <!-- VISOR DE LÁMINAS (Modal de Bootstrap). scripts/proceso.js pone la imagen elegida -->
-    <div class="modal fade visor" id="visor" tabindex="-1" aria-label="Lámina del proceso en grande" aria-hidden="true">
+    <div class="modal fade visor" id="visor" tabindex="-1" role="dialog" aria-label="Lámina del proceso en grande" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>

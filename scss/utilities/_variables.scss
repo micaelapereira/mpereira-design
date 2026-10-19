@@ -12,8 +12,6 @@ $color-hairline: #ddd7c9;   // líneas divisorias y borde de capturas
 $color-white: #fff;
 
 // --- Paleta de los botones ---
-$color-naranja: #FF5027;
-$color-durazno: #FFD6C0;
 $color-verde: #174418;
 $color-lima: #EEFF9F;
 $color-lavanda: #E7D6FF;
@@ -30,12 +28,13 @@ $color-ciruela: #572551;
 $pares: (
     durazno-claro $color-durazno-claro $color-naranja-oscuro, //  4,51:1 · "Ver Proyectos" y "Contacto" de Servicios (justo: no aclarar el naranja)
     menta $color-menta $color-ciruela,                        // 10,64:1 · mail en Contacto
-    naranja $color-naranja $color-durazno,                    //  2,43:1 · no cumple; sin uso (se borra en el paso 10)
-    durazno $color-durazno $color-naranja,                    //  2,43:1 · no cumple; sin uso (se borra en el paso 10)
     lima $color-lima $color-violeta,
     verde $color-verde $color-lima,
     lavanda $color-lavanda $color-violeta,
 );
+
+// Solo los proyectos tienen chip, cada uno con el color de su par
+$colores-chip: lima verde lavanda;
 
 // --- Placeholder "Próximamente" (MPereiraDesign) ---
 $color-tile-light: #dbd4c6;
