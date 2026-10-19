@@ -16,7 +16,7 @@ $color-verde: #174418;
 $color-lima: #EEFF9F;
 $color-lavanda: #E7D6FF;
 $color-violeta: #510A32;
-// Sumados en el paso 9 para cumplir el contraste de texto (WCAG AA, 4,5:1)
+// Colores con contraste suficiente para el texto de los botones (WCAG AA)
 $color-durazno-claro: #FFE4D6;
 $color-naranja-oscuro: #CC2500;
 $color-menta: #E0FAEB;
@@ -26,19 +26,15 @@ $color-ciruela: #572551;
 // Se recorren con @each para generar .btn-lima, .chip-lima, etc.
 // Al lado, el contraste del texto (WCAG AA pide 4,5:1 o más).
 $pares: (
-    durazno-claro $color-durazno-claro $color-naranja-oscuro, //  4,51:1 · "Ver Proyectos" y "Contacto" de Servicios (justo: no aclarar el naranja)
-    menta $color-menta $color-ciruela,                        // 10,64:1 · mail en Contacto
-    lima $color-lima $color-violeta,
-    verde $color-verde $color-lima,
-    lavanda $color-lavanda $color-violeta,
+    durazno-claro $color-durazno-claro $color-naranja-oscuro, //  4,51:1
+    menta $color-menta $color-ciruela,                        // 10,64:1
+    lima $color-lima $color-violeta,                          // 13,51:1
+    verde $color-verde $color-lima,                           // 10,36:1
+    lavanda $color-lavanda $color-violeta,                    // 10,74:1
 );
 
 // Solo los proyectos tienen chip, cada uno con el color de su par
 $colores-chip: lima verde lavanda;
-
-// --- Placeholder "Próximamente" (MPereiraDesign) ---
-$color-tile-light: #dbd4c6;
-$color-tile-dark: #847c6d;
 
 // --- Tipografía ---
 $font-display: "Familjen Grotesk", "Helvetica Neue", Arial, sans-serif;

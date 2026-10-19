@@ -82,21 +82,3 @@
 .volver {
     margin-top: 64px;
 }
-
-// --- MPereiraDesign: placeholder hasta que el sitio esté publicado ---
-.placeholder-principal {
-    display: flex;
-    align-items: flex-end;
-    aspect-ratio: 16 / 9;
-    padding: 14px 16px;
-    border-radius: $radius-img;
-    font-size: 12px;
-    text-align: left;
-    background: linear-gradient(135deg, $color-tile-light, $color-tile-dark);
-}
-
-.proximamente {
-    display: flex;
-    justify-content: center;
-    margin-top: 32px;
-}

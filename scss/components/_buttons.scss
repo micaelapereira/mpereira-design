@@ -30,7 +30,7 @@
     }
 }
 
-// --- Botones de color: .btn-naranja, .btn-durazno, .btn-lima, .btn-verde, .btn-lavanda ---
+// --- Botones de color: .btn-durazno-claro, .btn-menta, .btn-lima, .btn-verde, .btn-lavanda ---
 @each $nombre, $fondo, $texto in $pares {
     .btn-#{$nombre} {
         @include boton-par($fondo, $texto);
